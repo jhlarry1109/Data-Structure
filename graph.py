@@ -1,8 +1,8 @@
 li = []
 n, e = map(int,input().split())
 
-li = [[0] * n for _ in range(n)]
-l = [[] for _ in range(n)]
+li = [[0] * (n+1) for _ in range(n+1)]
+l = [[] for _ in range(n+1)]
 
 for i in range(e):
     a,b = map(int,input().split())
@@ -11,6 +11,6 @@ for i in range(e):
     l[a].append(b)
     l[b].append(a)
     
-for i in range(n):
-    print(*li[i])
-print(l)
+for i in range(1, n+1):
+    print(*li[i][1:])
+print(l[1:])

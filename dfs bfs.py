@@ -16,7 +16,7 @@ graph = {
 #DFS
 visited = {i: False for i in range(1,11)}
 sequence = []
-# x노드 탐색
+# x노드부터 탐색
 def f(x):
   sequence.append(x)
   visited[x] = True
